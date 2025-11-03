@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - THE GOLDEN GEMS AND PERFUMES</title>
+    <link rel="stylesheet" href="g.css">
+</head>
+<body>
+    <div class="rq">
+        <img src="shop logo.jpeg" height="120px" width="100px">
+        <center>
+        <h3>sign in or create account</h3>
+        <div class="hi">
+            <h4 class="qw">EMAIL</h4>
+         <input type="text" id="email" placeholder="enter your email or phone" required>
+         <h4>PASSWORD</h4>
+         <div class="po">
+         <input id="twp" type="password" placeholder="enter your password" required>
+         <span onclick="gu()"id="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/>
+</svg>
+</span>
+         </div>
+         <a href="MY PROJECT.html" class="kk"><button id="jj" onclick="jj()">SIGN IN</button></a>
+        </div>
+        <a href="new account.html" class="ll"><h3>create an account</h3></a>
+    </div>
+<script>
+const eyeOpen = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/>
+</svg>`;
+
+const eyeClosed = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M12 4.5C7 4.5 2.73 7.61 1 12c.65 1.66 1.7 3.14 3.02 4.34L2 18.36 3.41 19.77l18-18L20 0 17.66 2.34C16.11 1.54 14.13 1 12 1 7 1 2.73 4.11 1 8.5c.65 1.66 1.7 3.14 3.02 4.34l1.58-1.58C4.12 9.43 5.92 6.5 12 6.5c1.46 0 2.84.29 4.06.81l-1.5 1.5A4.49 4.49 0 0 0 12 8.5a4.5 4.5 0 0 0-4.5 4.5c0 .98.32 1.89.86 2.62l-1.47 1.47A6.5 6.5 0 0 1 12 10.5c.73 0 1.41.16 2.02.44l-1.54 1.54A2.5 2.5 0 0 0 12 12a2.5 2.5 0 0 0-2.5 2.5c0 .29.05.57.15.83l-1.48 1.48A4.5 4.5 0 0 1 12 9.5a4.5 4.5 0 0 1 4.5 4.5c0 .98-.32 1.89-.86 2.62l1.5 1.5A6.5 6.5 0 0 0 12 9.5c-.73 0-1.41.16-2.02.44l1.54 1.54A2.5 2.5 0 0 1 12 12a2.5 2.5 0 0 1-2.5 2.5c-.29 0-.57-.05-.83-.15l-1.48 1.48A4.5 4.5 0 0 0 12 9.5z"/>
+</svg>`;
+
+function gu(){
+    var att = document.getElementById("twp");
+    var span = document.getElementById("icon");
+    if(att.type === "password"){
+        att.type = "text";
+        span.innerHTML = eyeClosed;
+    } else {
+        att.type = "password";
+        span.innerHTML = eyeOpen;
+    }
+}
+function jj(){
+    var email=document.getElementById("email").value;
+    var password=document.getElementById("twp").value;
+    alert("login succesfully");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILVER - THE GOLDEN GEMS AND PERFUMES</title>
+    <link rel="stylesheet" href="project.css">
+    <meta http-equiv="Cache-Control" content="max-age=3600">
+    <link rel="preload" href="silver.jpg" as="image">
+    <link rel="preload" href="shop logo.jpeg" as="image">
+</head>
+<body>
+    <div class="h">
+        <img src="shop logo.jpeg" class="q">
+        <h1>THE GOLDEN GEMS AND PERFUMES</h1>
+        <a href="login  page.html" class="w">SIGN IN</a>
+        <a href="cart.html" class="j">&#x1F6D2;<span id="cartCount" class="cart-count" style="display:none;">0</span></a>
+    </div>
+
+    <div class="k">
+<div class="dropdown">
+  <a href="#" class="ae">MEN</a>
+  <div class="dropdown-content">
+    <a href="#">JAGUAR</a>
+    <a href="#">CR-7</a>
+    <a href="#">DUNHILL</a>
+  </div>
+</div>
+<div class="dropdown">
+  <a href="#" class="ae">WOMAN</a>
+  <div class="dropdown-content">
+    <a href="#">LOVELY</a>
+    <a href="#">GUCCI FLORA</a>
+    <a href="#">HAWAAS</a>
+    <a href="#">BLUE LADY</a>
+  </div>
+</div>
+<div class="dropdown">
+  <a href="#" class="ae">TEENS</a>
+  <div class="dropdown-content">
+    <a href="#">SILVER</a>
+    <a href="#">EID</a>
+    <a href="#">FERRARI</a>
+  </div>
+
+</div>
+<div class="dropdown">
+  <a href="#" class="ae">KIDS</a>
+  <div class="dropdown-content">
+    <a href="#">CHOCOLATE MUSK</a>
+    <a href="#">STRAWBERRY</a>
+    <a href="#">BLUEBERRY</a>
+    <A href="#">VANILLA</a>
+  </div>
+</div>
+<div class="dropdown">
+  <a href="#" class="ae">UNISEX</a>
+  <div class="dropdown-content">
+    <a href="#">ICE BERG</a>
+    <a href="#">WHITE MUSK</a>
+    <a href="#">ASEEL</a>
+  </div>
+  </div>
+<div class="dropdown">
+  <a href="#" class="ae">PREMIUM</a>
+  <div class="dropdown-content">
+    <a href="#">GREEN RASASI</a>
+    <a href="#">ARABIAN OUD</a>
+    <a href="#">OUD SOOFI</a>
+    <a href="#">MOROCCAN MUSK</a>
+    <a href="#">MAKKA MUSK</a>
+    <a href="#">OUD AL MADINA</a>
+    <a href="#">MEEZIYAN</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <a href="#" class="ac">LUXURY</a>
+  <div class="dropdown-content">
+    <a href="#">VELVET MUSK</a>
+    <a href="#">SILVER OUD</a>
+    <a href="#">MUKALATH SHAMAMA</a>
+    <a href="#">MUKALATH AMBER</a>
+  </div>
+</div>
+    <input type="text" id="searchInput" placeholder="🔍 Search" class="Search">
+  </div>
+
+    <div class="product-container">
+        <div class="product-images">
+            <div class="main-image">
+                <img src="silver.jpg" alt="SILVER Perfume" id="mainImg" loading="lazy">
+            </div>
+            <div class="thumbnail-gallery">
+                <img src="silver.jpg" alt="SILVER 1" class="thumbnail active" onclick="changeImage('silver.jpg')" loading="lazy">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">SILVER Perfume</h1>
+            <div class="rating">
+                <span class="stars">★★★★☆</span> <span>(4.5/5)</span> <span>123 reviews</span>
+            </div>
+            <p class="price">₹999 <span class="original-price">₹1299</span> <span class="discount">23% off</span></p>
+            <div class="quantity">
+                <label>Quantity:</label>
+                <button onclick="decreaseQty()">-</button>
+                <span id="qty">1</span>
+                <button onclick="increaseQty()">+</button>
+            </div>
+            <div class="buttons">
+                <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-btn" onclick="buyNow()">Buy Now</button>
+            </div>
+            <div class="delivery">
+                <p>Delivery by Tomorrow | Free</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="product-tabs">
+        <button class="tab-btn active" onclick="openTab('description')">Description</button>
+        <button class="tab-btn" onclick="openTab('specifications')">Specifications</button>
+        <button class="tab-btn" onclick="openTab('reviews')">Reviews</button>
+    </div>
+
+    <div id="description" class="tab-content active">
+        <p>A fresh and modern fragrance with metallic and citrus notes, perfect for teens seeking a clean and contemporary scent. Ideal for everyday use and casual outings.</p>
+    </div>
+
+    <div id="specifications" class="tab-content">
+        <ul>
+            <li>Brand: Silver</li>
+            <li>Fragrance Type: Eau de Parfum</li>
+            <li>Volume: 100ml</li>
+            <li>Gender: Teens</li>
+            <li>Top Notes: Citrus, Metallic</li>
+            <li>Heart Notes: Fresh, Aquatic</li>
+            <li>Base Notes: Musk, Amber</li>
+        </ul>
+    </div>
+
+    <div id="reviews" class="tab-content">
+        <div class="review">
+            <h4>John Doe</h4>
+            <span class="stars">★★★★★</span>
+            <p>Amazing fragrance! Lasts all day and smells great.</p>
+        </div>
+        <div class="review">
+            <h4>Jane Smith</h4>
+            <span class="stars">★★★★☆</span>
+            <p>Good quality, but a bit strong for my taste.</p>
+        </div>
+    </div>
+
+    <div id="productSection" style="display:none;">
+        <div class="product-row">
+            <a href="dunhill.html" class="product-link">
+                <div class="product-card">
+                    <img src="dunhill.jpg" alt="Product 1" class="product-img">
+                    <h3 class="product-title">DUNHILL</h3>
+                    <p class="product-price">₹999</p>
+                </div>
+            </a>
+            <a href="jaguar.html" class="product-link">
+                <div class="product-card">
+                    <img src="j.webp" class="product-img">
+                    <h3 class="product-title">JAGUAR</h3>
+                    <p class="product-price">₹999</p>
+                </div>
+            </a>
+            <a href="product.html?name=coolwater" class="product-link">
+                <div class="product-card">
+                    <img src="COOL WATER.jpg" class="product-img">
+                    <h3 class="product-title">COOL WATER</h3>
+                    <p class="product-price">₹999</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="productSection" style="display:none;">
+        <div class="product-row">
+            <a href="product.html?name=tamduo" class="product-link">
+                <div class="product-card">
+                    <img src="tam duo.jpg" class="product-img">
+                    <h3 class="product-title">TAMDUO</h3>
+                    <p class="product-price">₹999</p>
+                </div>
+            </a>
+            <a href="product.html?name=gucciflora" class="product-link">
+                <div class="product-card">
+                    <img src="gucci.jpg" class="product-img">
+                    <h3 class="product-title">GUCCI FLORA</h3>
+                    <p class="product-price">₹999</p>
+                </div>
+            </a>
+            <a href="product.html?name=cr7" class="product-link">
+                <div class="product-card">
+                    <img src="cr-7.jpg" class="product-img">
+                    <h3 class="product-title">CR-7</h3>
+                    <p class="product-price">₹999</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="productSection" style="display:none;">
+        <div class="product-row">
+            <div class="product-card">
+                <img src="ameer.webp" class="product-img">
+                <h3 class="product-title">AMEER al oud</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="musk rijali.webp" class="product-img">
+                <h3 class="product-title">MUSK RIJALI</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="aseel.webp" class="product-img">
+                <h3 class="product-title">ASEEL</h3>
+                <p class="product-price">₹999</p>
+            </div>
+        </div>
+    </div>
+    <div id="productSection" style="display:none;">
+        <div class="product-row">
+            <div class="product-card">
+                <img src="hawas.webp" class="product-img">
+                <h3 class="product-title">HAWAAS</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="Janntul-Firtaous.png" class="product-img">
+                <h3 class="product-title">JANNATUL FIRDOUS</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="shanaya.jpg" class="product-img">
+                <h3 class="product-title">SHANAYA</h3>
+                <p class="product-price">₹999</p>
+            </div>
+        </div>
+    </div>
+    <div id="productSection" style="display:none;">
+        <div class="product-row">
+            <div class="product-card">
+                <img src="rose.webp" class="product-img">
+                <h3 class="product-title">ROSE</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="jasmine.jpg" class="product-img">
+                <h3 class="product-title">JASMINE</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="lily.jpg" class="product-img">
+                <h3 class="product-title">LILY FLORA</h3>
+                <p class="product-price">₹999</p>
+            </div>
+        </div>
+    </div>
+    <div id="productSection" style="display:none;">
+        <div class="product-row">
+            <div class="product-card">
+                <img src="strawberry.jpg" class="product-img">
+                <h3 class="product-title">STRAWBERRY</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="blue berry.jpg" class="product-img">
+                <h3 class="product-title">BLUE BERRY</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="pineapple.webp" class="product-img">
+                <h3 class="product-title">PINE APPLE</h3>
+                <p class="product-price">₹999</p>
+            </div>
+        </div>
+    </div>
+    <div id="productSection" style="display:none;">
+        <div class="product-row">
+            <div class="product-card">
+                <img src="chocolate.webp" class="product-img">
+                <h3 class="product-title">CHOCOLATE MUSK</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="vanilla.webp" class="product-img">
+                <h3 class="product-title">VANILLA</h3>
+                <p class="product-price">₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="guava.jpeg" class="product-img">
+                <h3 class="product-title">GUAVA</h3>
+                <p class="product-price">₹999</p>
+            </div>
+        </div>
+    </div>
+
+    <p id="noResults" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-weight:bold; color:red; font-size:24px; z-index:1000;">
+      No match found
+    </p>
+    <div id="footer">
+    <div class="end">
+        <a href="https://www.instagram.com/the_golden_gems_perfumes/?igsh=d3I5MDBzYzlvZzR0#" class="y">INSTAGRAM ID: THE GOLDEN GEMS AND PERFUMES</a>
+        <h3 class="ch">contact:8098578259|9043074883</h3>
+        <h3 class="nn">Gmail Id:Goldenperfumes809@gmail.com</h3>
+    </div>
+
+    <div id="customAlert" class="custom-alert">
+        Added to cart!
+        <br><br>
+        <button class="alert-ok-btn" onclick="hideCustomAlert()">OK</button>
+    </div>
+    <br>
+    <div class="scroll-text">
+        <span><---------Visit us again--------></span>
+    </div>
+    </div>
+
+    <script>
+const searchInput = document.getElementById('searchInput');
+const productContainer = document.querySelector('.product-container');
+const productTabs = document.querySelector('.product-tabs');
+const tabContents = document.querySelectorAll('.tab-content');
+const noResults = document.getElementById('noResults');
+const footer = document.querySelector('.end');
+const scrollText = document.querySelector('.scroll-text');
+const allProductSections = document.querySelectorAll('#productSection');
+
+// Store original HTML of the product container
+const originalProductContainerHTML = productContainer.innerHTML;
+
+// Store original HTML of each section (so we can restore later)
+const originalProductSectionsHTML = Array.from(allProductSections).map(
+  section => section.innerHTML
+);
+
+// Store all product links for filtering
+const allCards = Array.from(document.querySelectorAll('.product-link'));
+
+searchInput.addEventListener('input', function() {
+  const filter = searchInput.value.toLowerCase().trim();
+  const matchingCards = allCards.filter(card =>
+    card.querySelector('.product-title').textContent.toLowerCase().includes(filter)
+  );
+  noResults.style.display = 'none';
+  if (filter !== '') {
+    productContainer.style.display = 'none';
+    productTabs.style.display = 'none';
+    tabContents.forEach(tab => tab.style.display = 'none');
+    // Clear all product sections
+    allProductSections.forEach(section => (section.innerHTML = ''));
+
+    if (matchingCards.length === 0) {
+      noResults.textContent = 'No match found';
+      noResults.style.display = 'block';
+      footer.style.display = 'none';
+      scrollText.style.display = 'none';
+    } else {
+      // Hide noResults message
+      noResults.style.display = 'none';
+
+      // Append matching cards in rows of 3
+      let currentRow = null;
+      const cardsPerRow = 3;
+      matchingCards.forEach((card, index) => {
+        if (index % cardsPerRow === 0) {
+          currentRow = document.createElement('div');
+          currentRow.className = 'product-row';
+          allProductSections[0].appendChild(currentRow);
+        }
+        currentRow.appendChild(card);
+        card.style.display = 'block';
+      });
+
+      // Hide other sections
+      allProductSections.forEach((section, index) => {
+        section.style.display = index === 0 ? 'block' : 'none';
+      });
+
+      allProductSections[0].style.marginTop = '12%';
+      footer.style.display = 'block';
+      scrollText.style.display = 'block';
+    }
+  } else {
+    // Restore everything when input is empty
+    allProductSections.forEach((section, index) => {
+      section.innerHTML = originalProductSectionsHTML[index];
+      section.style.display = 'none';
+    });
+
+    allProductSections[0].style.marginTop = '10px';
+    productContainer.style.display = 'flex';
+    productTabs.style.display = 'block';
+    const activeTab = document.querySelector('.tab-content.active');
+    if (activeTab) activeTab.style.display = 'block';
+    if (relatedProducts) relatedProducts.style.display = 'block';
+    if (offerImages) offerImages.style.display = 'block';
+    noResults.style.display = 'none';
+    footer.style.display = 'block';
+  }
+});
+function changeImage(src) {
+  document.getElementById('mainImg').src = src;
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  thumbnails.forEach(thumb => thumb.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+function decreaseQty() {
+  const qty = document.getElementById('qty');
+  let val = parseInt(qty.textContent);
+  if (val > 1) qty.textContent = val - 1;
+}
+
+function increaseQty() {
+  const qty = document.getElementById('qty');
+  let val = parseInt(qty.textContent);
+  qty.textContent = val + 1;
+}
+
+function openTab(tabName) {
+  const tabs = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-btn');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  buttons.forEach(btn => btn.classList.remove('active'));
+  document.getElementById(tabName).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function addToCart() {
+  const productName = document.querySelector('.product-title').textContent;
+  const productPrice = 999; // Extract price from DOM or hardcode for now
+  const productImage = document.getElementById('mainImg').src;
+  const quantity = parseInt(document.getElementById('qty').textContent);
+
+  const cartItem = {
+    name: productName,
+    price: productPrice,
+    image: productImage,
+    quantity: quantity,
+    pageUrl: 'silver.html'
+  };
+
+  let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const existingItem = cart.find(item => item.name === productName);
+  if (existingItem) {
+    existingItem.quantity += quantity;
+  } else {
+    cart.push(cartItem);
+  }
+
+  localStorage.setItem('cartItems', JSON.stringify(cart));
+  updateCartCount();
+  showCustomAlert();
+}
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const cartCountElement = document.getElementById('cartCount');
+
+  if (totalItems > 0) {
+    cartCountElement.textContent = totalItems;
+    cartCountElement.style.display = 'flex';
+  } else {
+    cartCountElement.style.display = 'none';
+  }
+}
+
+// Update cart count on page load
+document.addEventListener('DOMContentLoaded', updateCartCount);
+
+function buyNow() {
+  const productName = document.querySelector('.product-title').textContent;
+  const quantity = parseInt(document.getElementById('qty').textContent);
+  // Store product info in localStorage for buy page
+  const buyItem = {
+    name: productName,
+    quantity: quantity,
+    price: 999
+  };
+  localStorage.setItem('buyNowItem', JSON.stringify(buyItem));
+  window.location.href = 'buy.html';
+}
+
+function showCustomAlert() {
+  const alert = document.getElementById('customAlert');
+  alert.classList.add('show');
+}
+
+function hideCustomAlert() {
+  const alert = document.getElementById('customAlert');
+  alert.classList.remove('show');
+}
+
+function changeProduct(product) {
+  if (product === 'dunhill') {
+    window.location.href = 'dunhill.html';
+  } else if (product === 'cr7') {
+    // Assuming CR-7 page exists, replace with actual page
+    alert('CR-7 page not implemented yet');
+  }
+}
+    </script>
+</body>
+</html>

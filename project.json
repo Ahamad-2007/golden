@@ -1,0 +1,33 @@
+[
+  {
+    "img": "dunhill.jpg",
+    "title": "DUNHILL",
+    "price": "₹999"
+  },
+  {
+    "img": "j.webp",
+    "title": "JAGUAR",
+    "price": "₹999"
+  },
+  {
+    "img": "COOL WATER.jpg",
+    "title": "COOL WATER",
+    "price": "₹999"
+  },
+  {
+    "img": "tam duo.jpg",
+    "title": "TAMDUO",
+    "price": "₹999"
+  },
+  {
+    "img": "gucci.jpg",
+    "title": "GUCCI FLORA",
+    "price": "₹999"
+  },
+  {
+    "img": "cr-7.jpg",
+    "title": "CR-7",
+    "price": "₹999"
+  }
+  // Add more products as needed
+]

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now - THE GOLDEN GEMS AND PERFUMES</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="h">
+        <img src="shop logo.jpeg" class="q">
+        <h1>THE GOLDEN GEMS AND PERFUMES</h1>
+        <a href="login  page.html" class="w">SIGN IN</a>
+        <a href="cart.html" class="j">&#x1F6D2;<span id="cartCount" class="cart-count" style="display:none;">0</span></a>
+    </div>
+
+    <div class="k">
+        <!-- Navigation menus same as other pages -->
+        <div class="dropdown">
+            <a href="#" class="ae">MEN</a>
+            <div class="dropdown-content">
+                <a href="jaguar.html">JAGUAR</a>
+                <a href="cr7.html">CR-7</a>
+                <a href="dunhill.html">DUNHILL</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">WOMAN</a>
+            <div class="dropdown-content">
+                <a href="lovely.html">LOVELY</a>
+                <a href="gucciflora.html">GUCCI FLORA</a>
+                <a href="hawas.html">HAWAAS</a>
+                <a href="bluelady.html">BLUE LADY</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">TEENS</a>
+            <div class="dropdown-content">
+                <a href="silver.html">SILVER</a>
+                <a href="eid.html">EID</a>
+                <a href="ferrari.html">FERRARI</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">KIDS</a>
+            <div class="dropdown-content">
+                <a href="chocolate.html">CHOCOLATE MUSK</a>
+                <a href="strawberry.html">STRAWBERRY</a>
+                <a href="blueberry.html">BLUEBERRY</a>
+                <a href="vanilla.html">VANILLA</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">UNISEX</a>
+            <div class="dropdown-content">
+                <a href="iceberg.html">ICE BERG</a>
+                <a href="#">WHITE MUSK</a>
+                <a href="#">ASEEL</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">PREMIUM</a>
+            <div class="dropdown-content">
+                <a href="#">GREEN RASASI</a>
+                <a href="#">ARABIAN OUD</a>
+                <a href="#">OUD SOOFI</a>
+                <a href="#">MOROCCAN MUSK</a>
+                <a href="#">MAKKA MUSK</a>
+                <a href="#">OUD AL MADINA</a>
+                <a href="#">MEEZIYAN</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ac">LUXURY</a>
+            <div class="dropdown-content">
+                <a href="#">VELVET MUSK</a>
+                <a href="#">SILVER OUD</a>
+                <a href="#">MUKALATH SHAMAMA</a>
+                <a href="#">MUKALATH AMBER</a>
+            </div>
+        </div>
+        <input type="text" id="searchInput" placeholder="🔍 Search" class="Search">
+    </div>
+
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="upi">UPI</option>
+                </select>
+            </div>
+            <div class="form-group" id="cardDetails" style="display:none;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber">
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" placeholder="MM/YY">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv">
+            </div>
+            <div class="form-group" id="upiDetails" style="display:none;">
+                <label for="upiId">UPI ID:</label>
+                <input type="text" id="upiId">
+            </div>
+            <button type="submit" class="checkout-btn">Place Order</button>
+        </form>
+    </div>
+
+    <div class="bill-summary" style="max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <h3>Bill Summary</h3>
+        <div id="billItems"></div>
+        <div id="billTotal" style="font-size: 18px; font-weight: bold; text-align: right; margin-top: 10px;"></div>
+    </div>
+
+    <div class="end">
+        <a href="https://www.instagram.com/the_golden_gems_perfumes/?igsh=d3I5MDBzYzlvZzR0#" class="y">INSTAGRAM ID: THE GOLDEN GEMS AND PERFUMES</a>
+        <h3 class="ch">contact:8098578259|9043074883</h3>
+        <h3 class="nn">Gmail Id:Goldenperfumes809@gmail.com</h3>
+    </div>
+
+    <script>
+        // Search functionality (redirect to main page)
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const filter = this.value.toLowerCase().trim();
+            if (filter) {
+                window.location.href = 'MY PROJECT.html?search=' + encodeURIComponent(filter);
+            }
+        });
+
+        // Payment method toggle
+        document.getElementById('payment').addEventListener('change', function() {
+            const payment = this.value;
+            document.getElementById('cardDetails').style.display = payment === 'card' ? 'block' : 'none';
+            document.getElementById('upiDetails').style.display = payment === 'upi' ? 'block' : 'none';
+        });
+
+        // Form submission
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showCustomAlert('Order placed successfully! You will receive a confirmation email shortly.');
+            // Clear buyNowItem and checkoutFromCart after order placement
+            localStorage.removeItem('buyNowItem');
+            localStorage.removeItem('checkoutFromCart');
+            // Here you could send data to a server, but for demo, just alert
+            setTimeout(() => {
+                window.location.href = 'MY PROJECT.html';
+            }, 3000);
+        });
+
+        // Custom alert function
+        function showCustomAlert(message) {
+            const alertDiv = document.createElement('div');
+            alertDiv.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;">
+                    <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 400px; width: 90%;">
+                        <h3 style="margin: 0 0 15px 0; font-size: 24px;">Success!</h3>
+                        <p style="margin: 0 0 20px 0; font-size: 16px;">${message}</p>
+                        <button onclick="this.parentElement.parentElement.remove()" style="background: white; color: #28a745; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">OK</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(alertDiv);
+        }
+
+        // Load bill summary
+        function loadBillSummary() {
+            const checkoutFromCart = localStorage.getItem('checkoutFromCart');
+            const billItemsDiv = document.getElementById('billItems');
+            const billTotalDiv = document.getElementById('billTotal');
+
+            if (checkoutFromCart === 'true') {
+                // Load from cart
+                const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+                if (cart.length === 0) {
+                    billItemsDiv.innerHTML = '<p>No items in cart.</p>';
+                    billTotalDiv.innerHTML = '';
+                    return;
+                }
+
+                let total = 0;
+                billItemsDiv.innerHTML = '';
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+                    billItemsDiv.innerHTML += `
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <span>${item.name} (x${item.quantity})</span>
+                            <span>₹${itemTotal}</span>
+                        </div>
+                    `;
+                });
+                billTotalDiv.innerHTML = `<p>Total: ₹${total}</p>`;
+            } else {
+                // Load from buy now
+                const buyNowItem = JSON.parse(localStorage.getItem('buyNowItem'));
+                if (!buyNowItem) {
+                    billItemsDiv.innerHTML = '<p>No item selected for purchase.</p>';
+                    billTotalDiv.innerHTML = '';
+                    return;
+                }
+
+                const itemTotal = buyNowItem.price * buyNowItem.quantity;
+                billItemsDiv.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span>${buyNowItem.name} (x${buyNowItem.quantity})</span>
+                        <span>₹${itemTotal}</span>
+                    </div>
+                `;
+
+                billTotalDiv.innerHTML = `<p>Total: ₹${itemTotal}</p>`;
+            }
+        }
+
+        // Load bill summary on page load
+        loadBillSummary();
+
+        function updateCartCount() {
+          const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+          const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+          const cartCountElement = document.getElementById('cartCount');
+          if (cartCountElement) {
+            if (totalItems > 0) {
+              cartCountElement.textContent = totalItems;
+              cartCountElement.style.display = 'inline';
+            } else {
+              cartCountElement.style.display = 'none';
+            }
+          }
+        }
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+</body>
+</html>

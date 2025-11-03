@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - THE GOLDEN GEMS AND PERFUMES</title>
+    <link rel="stylesheet" href="project.css">
+    <meta http-equiv="Cache-Control" content="max-age=3600">
+    <style>
+        .cart-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+        }
+        .cart-item-details h3 {
+            margin: 0 0 10px 0;
+        }
+        .cart-item-details p {
+            margin: 5px 0;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .quantity-controls button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            cursor: pointer;
+        }
+        .quantity-controls span {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        .remove-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .proceed-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+        .cart-total {
+            text-align: right;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .checkout-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .empty-cart {
+            text-align: center;
+            font-size: 24px;
+            color: #666;
+            margin-top: 50px;
+        }
+        .view-btn {
+            color: #007bff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #007bff;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+        .view-btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .Search {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="h">
+        <img src="shop logo.jpeg" class="q">
+        <h1>THE GOLDEN GEMS AND PERFUMES</h1>
+        <a href="login  page.html" class="w">SIGN IN</a>
+        <a href="cart.html" class="j">&#x1F6D2;<span id="cartCount" class="cart-count" style="display:none;">0</span></a>
+    </div>
+
+    <div class="k">
+        <div class="dropdown">
+            <a href="#" class="ae">MEN</a>
+            <div class="dropdown-content">
+                <a href="jaguar.html">JAGUAR</a>
+                <a href="cr7.html">CR-7</a>
+                <a href="dunhill.html">DUNHILL</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">WOMAN</a>
+            <div class="dropdown-content">
+                <a href="lovely.html">LOVELY</a>
+                <a href="gucciflora.html">GUCCI FLORA</a>
+                <a href="hawas.html">HAWAAS</a>
+                <a href="bluelady.html">BLUE LADY</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">TEENS</a>
+            <div class="dropdown-content">
+                <a href="silver.html">SILVER</a>
+                <a href="eid.html">EID</a>
+                <a href="ferrari.html">FERRARI</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">KIDS</a>
+            <div class="dropdown-content">
+                <a href="chocolate.html">CHOCOLATE MUSK</a>
+                <a href="strawberry.html">STRAWBERRY</a>
+                <a href="blueberry.html">BLUEBERRY</a>
+                <a href="vanilla.html">VANILLA</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">UNISEX</a>
+            <div class="dropdown-content">
+                <a href="iceberg.html">ICE BERG</a>
+                <a href="#">WHITE MUSK</a>
+                <a href="#">ASEEL</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ae">PREMIUM</a>
+            <div class="dropdown-content">
+                <a href="#">GREEN RASASI</a>
+                <a href="#">ARABIAN OUD</a>
+                <a href="#">OUD SOOFI</a>
+                <a href="#">MOROCCAN MUSK</a>
+                <a href="#">MAKKA MUSK</a>
+                <a href="#">OUD AL MADINA</a>
+                <a href="#">MEEZIYAN</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="ac">LUXURY</a>
+            <div class="dropdown-content">
+                <a href="#">VELVET MUSK</a>
+                <a href="#">SILVER OUD</a>
+                <a href="#">MUKALATH SHAMAMA</a>
+                <a href="#">MUKALATH AMBER</a>
+            </div>
+        </div>
+        <input type="text" id="searchInput" placeholder="🔍 Search" class="Search">
+    </div>
+
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total"></div>
+        <button id="checkoutBtn" class="checkout-btn" style="display:none;">Proceed to Checkout</button>
+    </div>
+
+    <p id="noResults" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-weight:bold; color:red; font-size:24px; z-index:1000;">No match found</p>
+    <div class="end">
+        <a href="https://www.instagram.com/the_golden_gems_perfumes/?igsh=d3I5MDBzYzlvZzR0#" class="y">INSTAGRAM ID: THE GOLDEN GEMS AND PERFUMES</a>
+        <h3 class="ch">contact:8098578259|9043074883</h3>
+        <h3 class="nn">Gmail Id:Goldenperfumes809@gmail.com</h3>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const cartContainer = document.querySelector('.cart-container');
+        const noResults = document.getElementById('noResults');
+        const footer = document.querySelector('.end');
+
+        // Store original cart HTML
+        const originalCartHTML = cartContainer.innerHTML;
+
+        searchInput.addEventListener('input', function() {
+            const filter = searchInput.value.toLowerCase().trim();
+            if (filter !== '') {
+                // Hide cart and show no results
+                cartContainer.style.display = 'none';
+                noResults.textContent = 'Search not available on cart page';
+                noResults.style.display = 'block';
+                footer.style.display = 'none';
+            } else {
+                // Restore cart
+                cartContainer.style.display = 'block';
+                noResults.style.display = 'none';
+                footer.style.display = 'block';
+            }
+        });
+
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartTotalDiv = document.getElementById('cartTotal');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+                cartTotalDiv.innerHTML = '';
+                checkoutBtn.style.display = 'none';
+                return;
+            }
+
+            let total = 0;
+            cartItemsDiv.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                cartItemsDiv.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image || 'dunhill.jpg'}" alt="${item.name}" loading="lazy">
+                        <div class="cart-item-details">
+                            <h3 class="product-title">${item.name}</h3>
+                            <p>Price: ₹${item.price}</p>
+                            <div class="quantity-controls">
+                                <button onclick="updateQuantity(${index}, -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="updateQuantity(${index}, 1)">+</button>
+                            </div>
+                            <p>Subtotal: ₹${itemTotal}</p>
+                        </div>
+                        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+                        <button class="proceed-btn" onclick="proceedToBuy(${index})">Proceed</button>
+                        <button class="view-btn" onclick="viewProduct(${index})">View Product</button>
+                    </div>
+                `;
+            });
+
+            cartTotalDiv.innerHTML = `<p>Total: ₹${total}</p>`;
+            checkoutBtn.style.display = 'block';
+        }
+
+        function updateQuantity(index, change) {
+            const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            loadCart();
+            updateCartCount();
+        }
+
+        function removeItem(index) {
+            const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            loadCart();
+            updateCartCount();
+        }
+
+        document.getElementById('checkoutBtn').addEventListener('click', function() {
+            localStorage.setItem('checkoutFromCart', 'true');
+            window.location.href = 'buy.html';
+        });
+
+        // Load cart on page load
+        loadCart();
+
+        function updateCartCount() {
+          const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+          const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+          const cartCountElement = document.getElementById('cartCount');
+          if (cartCountElement) {
+            if (totalItems > 0) {
+              cartCountElement.textContent = totalItems;
+              cartCountElement.style.display = 'inline';
+            } else {
+              cartCountElement.style.display = 'none';
+            }
+          }
+        }
+        function proceedToBuy(index) {
+            const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const item = cart[index];
+            localStorage.setItem('buyNowItem', JSON.stringify(item));
+            window.location.href = 'buy.html';
+        }
+
+        function viewProduct(index) {
+            const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const item = cart[index];
+            if (item.pageUrl) {
+                window.location.href = item.pageUrl;
+            } else {
+                // Fallback to getProductPage if pageUrl not set
+                const page = getProductPage(item.name);
+                window.location.href = page;
+            }
+        }
+
+        function getProductPage(name) {
+            const processedName = name.toLowerCase().replace(/\s+/g, '');
+            const mappings = {
+                'jaguarperfume': 'jaguar.html',
+                'dunhillperfume': 'dunhill.html',
+                'cr7perfume': 'cr7.html',
+                'lovely': 'lovely.html',
+                'gucciflora': 'gucciflora.html',
+                'hawas': 'hawas.html',
+                'bluelady': 'bluelady.html',
+                'silver': 'silver.html',
+                'eid': 'eid.html',
+                'ferrari': 'ferrari.html',
+                'chocolatemuskperfume': 'chocolate.html',
+                'strawberry': 'strawberry.html',
+                'blueberry': 'blueberry.html',
+                'vanilla': 'vanilla.html',
+                'iceberg': 'iceberg.html'
+            };
+            return mappings[processedName] || ('product.html?name=' + processedName); // fallback to product.html with processed name
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+</body>
+</html>
